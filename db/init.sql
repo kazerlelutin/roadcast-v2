@@ -1,0 +1,3 @@
+CREATE USER my_user WITH ENCRYPTED PASSWORD 'my_password';
+CREATE DATABASE my_project OWNER my_user;
+GRANT ALL PRIVILEGES ON DATABASE my_project TO my_user;

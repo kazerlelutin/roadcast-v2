@@ -1,0 +1,14 @@
+# Serveur pour le frontend
+localhost:3000 {
+	root * ./front/dist
+	file_server
+
+    tls internal
+}
+
+# Reverse proxy pour l'API backend
+localhost:8085 {
+	reverse_proxy localhost:8080
+
+	tls internal
+}
